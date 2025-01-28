@@ -16,7 +16,7 @@ void Fraction::setDenom(int num)
 	}
 	else
 	{
-		cout << "It is impossible to denominator to be 0";
+		throw invalid_argument("error ! denominator is 0\n");
 	}
 }
 
@@ -37,15 +37,8 @@ void Fraction::printFract()
 
 Fraction::Fraction(int num, int denom)
 {
-	if (denom != 0)
-	{
-		this->numerator = num;
-		this->denominator = denom;
-	}
-	else
-	{
-		cout << "It is impossible to denominator to be 0";
-	}
+	setNumer(num);
+    setDenom(denom);
 }
 
 double& Fraction::operator+(Fraction fr)
@@ -73,7 +66,14 @@ Fraction& Fraction::operator*(Fraction fr)
 
 Fraction& Fraction::operator/(Fraction fr)
 {
-	this->numerator = this->numerator * fr.denominator;
-	this->denominator = this->denominator * fr.numerator;
-	return *this;
+	if (fr.denominator != 0)
+	{
+		this->numerator = this->numerator * fr.denominator;
+		this->denominator = this->denominator * fr.numerator;
+		return *this;
+	}
+	else
+	{
+		throw logic_error("error ! denominator is 0");
+	}
 }
