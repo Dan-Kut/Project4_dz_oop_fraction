@@ -1,4 +1,2 @@
-﻿  Fraction.cpp
-C:\Users\kutum\source\repos\Project6_dz_oop\Project4_dz_oop_fraction\Fraction.cpp(57,1): warning C4172: returning address of local variable or temporary : d
-C:\Users\kutum\source\repos\Project6_dz_oop\Project4_dz_oop_fraction\Fraction.cpp(49,1): warning C4172: returning address of local variable or temporary : d
+﻿  dz4_oop_fraction.cpp
   Project4_dz_oop_fraction.vcxproj -> C:\Users\kutum\source\repos\Project6_dz_oop\x64\Debug\Project4_dz_oop_fraction.exe
